@@ -280,6 +280,12 @@ char* spctag_get_emulator()
 		switch ( (int)spctag_tags_bin->emulator ) {
 			case 1 : emulator = "ZSNES"; break;
 			case 2 : emulator = "Snes9x"; break;
+			case 3 : emulator = "ZST2SPC"; break;
+			case 4 : emulator = "Other"; break;
+			case 5 : emulator = "SNEShout"; break;
+			case 6 : emulator = "ZSNES / W"; break;
+			case 7 : emulator = "Snes9xpp"; break;
+			case 8 : emulator = "SNESGT"; break;
 			default : emulator = "Unknown";
 		}
 	}
