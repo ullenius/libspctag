@@ -1,0 +1,20 @@
+== version 0.2 (2011-09-18) ==
+	* Add a changelog file
+	* Fix printing of text tags
+	* Bump up soversion number
+	* Rewrite test program
+	* Add save() function
+	* Move to the start of the file before working on it
+	* Add functions to set length, fade length, artist, channels and emulator
+	* Fix spctag_get_emulator()
+	* Export spctag_is_init and spctag_txt_tag
+	* Don't export spctag_is_text()
+	* Fix length and fade length detection for binary tags
+	* Add functions to set song title, game title, comments and dump date
+	* Move tag structure declarations to spctag.h
+	* Move fields length and return codes definitions to spctag.h
+	* Prefix all definitions with SPCTAG 
+	* Only export symbols belonging to the public API
+
+== version 0.1 (2011-07-03) ==
+	* Initial commit

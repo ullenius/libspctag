@@ -1,0 +1,23 @@
+The following lines should do the work :
+$ cd libspctag-x.x
+$ mdir build;cd build
+$ cmake ..
+$ make
+# make install
+
+This will build the project in the build subdirectory.
+By default the install prefix is /usr/local. Use "cmake -DCMAKE_INSTALL_PREFIX=anywhere" to install in another directory.
+You can choose build type using "cmake -DCMAKE_BUILD_TYPE=Debug|Release|RelWithDebInfo|MinSizeRel".
+
+Compilation has only been tested with cmake 2.8.5 on Linux. I think it works with a 2.6, this is why cmake 2.6 is required in the CMakeList.txt. Tell me if it works with older versions.
+
+
+If you can not or don't want use cmake, you can use following commands to compile and install libspctag
+$ cd src
+$ gcc -fPIC -Wall -c spctag.c
+$ gcc -shared -Wl,-soname,libspctag.so.x -o libspctag.so.x.x spctag.o -lc
+# cp libspctag.so.x.x /usr/local/lib
+# cd /usr/local/lib
+# ln -s libspctag.so.x.x libspctag.so.x
+# ln -s libspctag.so.x libspctag.so
+

@@ -1,0 +1,10 @@
+libspctag README file
+
+See INSTALL file for installation instructions.
+
+libspctag is a library written in C that can read and write ID666 tags from SPC files. For the moment, the library can not read or write extended ID666 tags.
+
+Look at the test/test.c file to understand how this library should be used.
+
+Author : Jérôme SONRIER <jsid@emor3j.fr.eu.org>
+
