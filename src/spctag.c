@@ -77,7 +77,7 @@ void set_formated_channels( char* formated_channels, char* channels )
 	int i;
 
 	for ( i=0; i<=7; i++ ) {
-		masque = 0x1 << 7-i;
+		masque = 0x1 << (7-i);
 		
 		if ( formated_channels[i] == '1' )
 			*channels |= masque;
@@ -409,6 +409,8 @@ int spctag_set_defaultchannels( char* new_defaultchannels )
 	} else {
 		set_formated_channels( new_defaultchannels, &spctag_tags_bin->default_channels );
 	}
+
+    return SPCTAG_SUCCESS;
 }
 
 int spctag_set_emulator( char* new_emulator )
@@ -428,6 +430,7 @@ int spctag_set_emulator( char* new_emulator )
 		else
 			spctag_tags_bin->emulator = 0;
 	}
+    return SPCTAG_SUCCESS;
 }
 
 int spctag_save( FILE* file )
@@ -440,6 +443,8 @@ int spctag_save( FILE* file )
 		fwrite( spctag_tags_txt, sizeof(*spctag_tags_txt), 1, file );
 	else
 		fwrite( spctag_tags_bin, sizeof(*spctag_tags_bin), 1, file );
+
+    return SPCTAG_SUCCESS;
 }
 
 void spctag_free()
